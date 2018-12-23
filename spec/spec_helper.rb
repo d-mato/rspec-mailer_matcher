@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "rspec/mailer_matcher"
+require "rspec-mailer_matcher"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
