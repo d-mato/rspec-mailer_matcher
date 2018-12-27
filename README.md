@@ -20,7 +20,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-expect { _any_action_ }.to deliver(to: 'to@example.org', from: 'from@example.org', subject: 'Hello world')
+it {
+  expect { _any_action_ }.to deliver(to: 'to@example.org', from: 'from@example.org', subject: 'Hello world')
+}
 ```
 
 ## Development
