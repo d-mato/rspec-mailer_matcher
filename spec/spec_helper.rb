@@ -1,5 +1,7 @@
-require "bundler/setup"
-require "rspec-mailer_matcher"
+require 'bundler/setup'
+require 'rspec-mailer_matcher'
+
+ActionMailer::Base.delivery_method = :test
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
