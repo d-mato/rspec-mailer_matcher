@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-mailer_matcher (0.1.0)
+    rspec-mailer_matcher (0.1.1)
       actionmailer
 
 GEM
