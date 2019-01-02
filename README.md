@@ -19,13 +19,21 @@ Or install it yourself as:
 
 ## Usage
 
+First of all, add the following line to your `spec_helper.rb` or `rails_helper.rb`:
+
+```ruby
+require 'rspec-mailer_matcher'
+```
+
+Then, you can use `deliver` matcher:
+
 ```ruby
 it {
-  expect { _any_action_ }.to deliver(to: 'to@example.org', from: 'from@example.org', subject: 'Hello world')
+  expect { _any_action_ }.to deliver to: 'to@example.org', from: 'from@example.org', subject: 'Hello world'
 }
 ```
 
-or using `subject` block
+or using `subject` block:
 
 ```ruby
 subject {
@@ -33,7 +41,7 @@ subject {
 }
 
 it {
-  is_expected.to deliver(to: 'to@example.org', from: 'from@example.org', subject: 'Hello world')
+  is_expected.to deliver to: 'to@example.org', from: 'from@example.org', subject: 'Hello world'
 }
 ```
 
