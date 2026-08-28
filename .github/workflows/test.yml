@@ -12,11 +12,15 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Ruby ${{ matrix.ruby }} / ActionMailer ${{ matrix.actionmailer }}
     strategy:
       fail-fast: false
       matrix:
         ruby: ["3.3", "3.4", "4.0"]
+        actionmailer: ["8.0", "8.1"]
+
+    env:
+      BUNDLE_GEMFILE: gemfiles/actionmailer_${{ matrix.actionmailer }}.gemfile
 
     steps:
       - uses: actions/checkout@v6
