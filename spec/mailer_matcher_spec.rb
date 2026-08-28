@@ -6,12 +6,12 @@ RSpec.describe MailerMatcher do
   end
 
   describe 'deliver' do
-    subject {
+    subject do
       proc {
         mailer = ActionMailer::Base.new
         mailer.mail(to: 'to@example.org', from: 'from@example.org', subject: 'Hello world', body: '').deliver
       }
-    }
+    end
 
     it { is_expected.to deliver to: 'to@example.org' }
     it { is_expected.to deliver from: 'from@example.org' }

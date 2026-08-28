@@ -1,0 +1,12 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+
+# The require path the gem publishes; renaming it would break every user.
+Naming/FileName:
+  Exclude:
+    - lib/rspec-mailer_matcher.rb
+
+# The matcher and the suite are each a single DSL block.
+Metrics/BlockLength:
+  Enabled: false
