@@ -1,5 +1,6 @@
 require 'mailer_matcher/version'
 require 'action_mailer'
+require 'rspec/expectations'
 
 RSpec::Matchers.define :deliver do
   supports_block_expectations
